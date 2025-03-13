@@ -38,8 +38,8 @@ jobs:
       uses: actions/cache@v3
       with:
         path: .commitHash
- #      key: commitHash_${{ steps.getHash.outputs.commitHash }}
-        key: ${{ steps.getHash.outputs.commitHash }}
+        key: commitHash_${{ steps.getHash.outputs.commitHash }}
+ #      key: ${{ steps.getHash.outputs.commitHash }}
 
     - name: Save New Commit Hash
       if: steps.cacheHash.outputs.cache-hit != 'true'
